@@ -164,6 +164,7 @@ button:hover {
 
 .no-scroll {
   overflow-y: hidden;
+  touch-action: none;
 }
 
 .container {
@@ -261,6 +262,9 @@ body {
   font-weight: 400;
   line-height: 20px; /* 166.667% */
   padding: 35px 0;
+  li{
+    text-transform: uppercase;
+  }
 }
 @media (min-width: 720px) {
   .footer__contacts-list {
@@ -411,6 +415,15 @@ body {
   }
 }
 
+.hero-slider{
+  border-radius: 8px;
+}
+
+@media (min-width: 720px) {
+  .hero-slider{
+    border-radius: 16px;
+  }
+}
 .hero__slide {
   background-size: cover;
   background-position: 100% 0%;
@@ -557,13 +570,13 @@ body {
   width: 100%;
   height: 100%;
   z-index: 99;
-  padding: 20px 0;
   transition: all 0.2s ease-in;
   color: black;
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
   word-wrap: break-word;
+
 }
 @media (min-width: 720px) {
   .mobile-nav {
@@ -572,14 +585,15 @@ body {
 }
 
 .mobile-nav--open {
-  top: 100px;
+  top: 198px;
+  overflow-y: scroll;
 }
 
 .mobile-nav a {
   color: #000;
 }
 
-.mobile-nav__list {
+.mobile-nav__list{
   display: flex;
   flex-direction: column;
   align-items: start;
